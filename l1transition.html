@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	
+	<title>CSS transition</title>
+
+	<style type="text/css">
+
+	    button{
+	    	width:202px;
+	    	height:200px;
+	    	background-color:gray;
+	    	color:gold;
+	    	font-size:30px;
+	    	border:0;
+	    	/*transition-property:background-color,width;
+	    	transition-duration:2000ms;*/
+	    	transition:background-color 3s;
+	    	transition-timing-function:ease-in;
+
+
+	    }
+
+	    /*pseudo class*/
+
+	    button:hover{
+	    	background-color:blue;
+	    	/*width:100%;*/
+	    	border-radius:10px;
+	    }
+
+    </style>
+
+</head>
+
+<body>
+
+<button>CSS transition</button>
+
+</body>
+
+</html>

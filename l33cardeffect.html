@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Card Effect</title>
+	<style type="text/css">
+		body{
+			font-family: sans-serif;
+			height: 100vh;
+
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+		.container{
+			width: 400px;
+			height: 500px;
+			position: relative;
+			overflow: hidden;
+
+
+
+		}
+
+		.container img{
+			width: 100%;
+			height: 100%;
+			transition: all 0.4s;
+
+		}
+
+		.caption{
+			width: 100%;
+			height: 100%;
+
+			position: absolute;
+			top: 0;
+			left: 0;
+
+			display: flex;
+			justify-content: center;
+			align-items: center;
+
+			flex-direction: column;
+			color: #fff;
+
+			transform: translateX(-100%);
+			transition: all 0.4s;
+
+		}
+
+		.caption h1{
+			margin: 0;
+			text-transform: uppercase;
+		}
+
+		.caption p{
+			text-transform: capitalize;
+			font-size: 18px;
+
+		}
+
+		.container:hover .caption{
+			transform: translate(0%);
+			background-color: rgba(0,0,0,0.5);
+		}
+
+		.container:hover img{
+			transform: rotate(-10deg)scale(1.4);
+		}
+
+
+	</style>
+</head>
+<body>
+	<div class="container">
+		<img src="./image/burger.jpg" />
+		<div class="caption">
+			<h1>How Sweet!</h1>
+			<p>This is css animation for car effect</p>
+		</div>
+	</div>
+</body>
+</html>

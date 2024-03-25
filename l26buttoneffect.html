@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Button Effect</title>
+	<style type="text/css">
+		body{
+			font-family: sans-serif;
+			background-color: #333;
+			height: 100vh;
+
+			display: flex;
+			justify-content: center;
+			align-items: center;
+
+			margin: 0;
+			overflow: hidden;
+		}
+
+		a{
+			width: 200px;
+			text-align: center;
+			line-height: 60px;
+            color: orange;
+			text-decoration: none;
+			text-transform: uppercase;
+			letter-spacing: 3px;
+			font-size: 21px;
+
+			position: relative; 
+            
+
+
+		}
+
+		a::before{
+			content: "";
+			width: 200px;
+			height: 90px;
+			border-left: 2px solid red;
+			border-right: 2px solid orange;
+
+			position: absolute;
+			top: -15px;
+			left: 0;
+
+			transition: all 0.4s;
+
+		}
+
+		a::after{
+			content: "";
+			width: 230px;
+			height: 60px;
+			border-top: 2px solid #f00;
+			border-bottom: 2px solid orange;
+			position: absolute;
+			top: 0;
+			left: -15px;
+
+			transition: all 0.4s;
+
+			transition-delay: 0.41s/*;(parent မှာ ပေးရင် တော့ transition က အဝင်ရော၊အထွက်ရော transition ဝင်တယ်။)အဝင်မှာ transition-delay မဖြစ်စေရင် ချင်တော့ transition-delay value ကို zero ပေးလိုက်ပေါ့*/
+		}
+
+		a:hover::before{
+			transform: rotateY(-180deg);
+		}
+
+		a:hover::after{
+			transform: rotateX(180deg);
+		}
+		
+
+	</style>
+</head>
+<body>
+	
+    <a href="#">Hover me</a>
+
+</body>
+</html>

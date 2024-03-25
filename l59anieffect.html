@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ani Effect</title>
+	<link href="../dltbatch6/libs/fonts/fontawesomepro/css/brands.min.css" rel="stylesheet" type="text/css" />
+	<link href="../dltbatch6/libs/fonts/fontawesomepro/css/fontawesome.min.css" rel="stylesheet" type="text/css" />
+	<style type="text/css">
+		body{
+			height: 100vh;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			background: #f2f2f2;
+		}
+
+		.container{
+			display: flex;
+			text-align: center;
+
+
+		}
+
+		.icon{
+			width: 90px;
+			height: 90px;
+			background: #f1f1f1;
+			box-shadow: 0 3px 10px rgba(0,0,0,0.5);
+		    border-radius: 20px;
+		    color: #0f0;
+		    margin: 10px;
+		    position: relative;
+		    overflow: hidden;
+
+
+		}
+
+		.icon i{
+			font-size: 24px;
+			line-height: 90px;
+			transition: all 1s;
+
+		}
+
+		.icon:hover i{
+			color: #fff;
+			transform: scale(1.4);
+		}
+
+		.icon::before{
+			content: "";
+			width: 130%;
+			height: 130%;
+			background-color: green;
+
+			position: absolute;
+			top: 90%;
+			left: -150%;
+
+			transform: rotate(45deg);
+		}
+
+		.icon:hover::before{
+			/*animation-name: myani;
+		    animation-duration: 1s;
+		    animation-fill-mode: forwards;*/
+		    animation: myani 1s forwards;
+		    
+
+		}
+
+		@keyframes myani{
+			0%{
+               top: 90%;
+               left: -150%;
+			}
+
+			50%{
+              top: -30%;
+              left: 16%;
+			}
+
+			100%{
+				top: -14%;
+				left: -10%;
+				
+			}
+		}
+
+	</style>
+</head>
+<body>
+	<div class="container">
+		<a href="#" class="icon"><i class="fab fa-facebook-f"></i></a>
+		<a href="#" class="icon"><i class="fab fa-facebook-messenger"></i></a>
+		<a href="#" class="icon"><i class="fab fa-tiktok"></i></a>
+		<a href="#" class="icon"><i class="fab fa-youtube"></i></a>
+		<a href="#" class="icon"><i class="fab fa-github"></i></a>
+
+	</div>
+
+</body>
+</html>

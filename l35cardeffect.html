@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Card Effect</title>
+	<style type="text/css">
+		body{
+			font-family: 'Time New Roman',arial;
+			height: 100vh;
+
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+		.container{
+			width: 400px;
+			height: 500px;
+
+			position: relative;
+			overflow: hidden;
+		}
+
+		.container img{
+			width: 100%;
+			height: 100%;
+
+			transition: all 0.5s;
+		}
+
+		.container  .caption{
+			width: 100%;
+			height: 30%;
+
+			position: absolute;
+			bottom: 0;
+			left: 0;
+
+			display: flex;
+			justify-content: center;
+			align-items: center;
+            flex-direction: column;
+			color: #fff;
+			background-color: #000;
+
+			transform: translateY(100%);
+			transition: all 0.5s;
+
+
+		}
+
+		.container h1{
+			text-transform: uppercase;
+		}
+
+		.container p{
+			text-transform: capitalize;
+			font-size: 18px;
+		}
+
+
+
+		.container:hover .caption{
+			transform: translateY(0%);
+		}
+
+		.container:hover img{
+			transform: translateY(-30%);
+		}
+		
+
+	</style>
+</head>
+<body>
+    
+    <div class="container">
+    	<img src="./image/burger.jpg" />
+    	<div class="caption">
+    		<h1>Hee sound?</h1>
+    		<p>This is css animation for card effect</p>
+    	</div>
+    </div>
+
+
+</body>
+</html>

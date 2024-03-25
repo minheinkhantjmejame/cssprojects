@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Button Effect</title>
+	<style type="text/css">
+
+	body{ 
+	  height: 100vh;
+      
+      display: flex;
+	  justify-content: center;/*body tag မှာdisplay,justify-content,align-items တို့ကို*/
+	  align-items: center;    /*ပေးတာက a tag ရဲ့ parent ဖြစ်တဲ့အတွက်ပေးတာ*/
+
+	  margin: 0;
+	  overflow: hidden;
+
+		
+	}
+
+	a{
+		text-decoration: none;
+		color: #444;
+		font-size: 45px;	
+	    border: 2px solid black;
+	        /*(top&bottom) (left&right)    */
+	    padding: 40px 60px;
+
+	    position: relative;
+
+	    overflow: hidden;
+
+
+	}
+
+	/*pseudo element(::)*/
+
+	/*a::before{
+         content: "MIN";(double or single)
+	}
+
+	a::after{
+		content: "HEIN";
+	}
+*/   
+     /* ဒီ button effect လုပ်တဲ့နေရာမှာ div tag နဲ့ background-color ထည့်လို့လည်း
+      ရတယ်။before and after ကိုသိအောင်လို့ သုံးပြခြင်းဖြစ်သည်။ */
+
+    a::before{
+    	content: ""; /*content ကိုwidth and height ရဲ့ထိပ်ဆုံးမှာရေး */
+    	             /*contentကို ရေးမိသလား မရေးမိဘူးလားစစ်ရလွယ်အောင်လို့ */  
+        width: 100%;
+        height: 100%;
+
+        background-color: yellow;
+
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        z-index: -1;
+
+        transform: rotate(90deg);
+        transform-origin: right top;
+        
+
+        transition: transform 1s;
+
+
+        
+        /*top:;*/
+        /*bottom: ;
+        left: ;
+        right: ;
+   */
+
+    } 
+
+    a:hover::before{
+    	transform: rotate(0deg);
+    }
+
+
+
+
+	
+	</style>
+
+</head>
+<body>
+    
+    <a href="#">Hover Me</a>
+
+    
+    
+    
+
+  
+</body>
+</html>

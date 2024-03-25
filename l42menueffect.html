@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Menu Effect</title>
+	<style type="text/css">
+		
+		body{
+			background: #666;
+			height: 100vh;
+
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+
+		ul{
+			list-style-type: none;
+			padding: 0;
+			margin: 0;
+		}
+
+		ul li{
+			margin: 5px;
+		}
+
+		ul li a{
+			
+			height: 40px;
+	
+			display: block;
+			text-decoration: none;
+			font-size: 20px;
+			color: #fff;
+			text-transform: uppercase;
+			letter-spacing: 2px;
+
+			padding: 5px 10px;
+
+			overflow: hidden;
+
+			position: relative;
+			
+		}
+
+
+
+
+
+		ul li a span{
+			width: 100%;
+			height: 100%;
+
+			display: flex;
+			align-items: center;
+			justify-content: center;
+
+			transition: all 0.5s;
+		}
+
+		a:hover span:nth-child(1){
+			transform: translateY(-100%);
+		}
+
+		a:hover span:nth-child(2){
+			transform: translateY(-100%);
+		}
+
+		a::before{
+			content: "";
+			width: 100%;
+			height: 100%;
+			background-color: skyblue;
+
+			position: absolute;
+			left: 0;
+			top: 0;
+
+			transform: translateX(-101%);
+			transition: all 0.3s;
+			transform-origin: left;
+
+			
+
+		}
+
+		a:hover::before{
+			transform: translateX(0);
+			transition-delay: 0.5s;
+		}
+
+
+	</style>
+</head>
+<body>
+	<ul>
+		<li><a href="#"><span>Home</span><span>Home</span></a></li>
+	
+		<li><a href="#"><span>About</span><span>About</span></a></li>
+		<li><a href="#"><span>Portfolio</span><span>Portfolio</span></a></li>
+		<li><a href="#"><span>Home</span><span>Home</span></a></li>
+	</ul>		
+				
+
+			
+	
+	
+</body>
+</html>

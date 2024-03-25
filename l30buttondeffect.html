@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Button Effect</title>
+	<link href="" rel="stylesheet" type="text/css" />
+	<style type="text/css">
+		body{
+			height: 100vh;
+            background: #0c9464;
+
+			display: flex;
+			justify-content: center;
+			align-items: center;
+
+			margin: 0;
+			overflow: hidden;
+		}
+
+		button{
+			font-family: sans-serif;
+			background: transparent;
+			border: none;
+            color: #fff;
+			font-size: 29px;
+			font-weight: bold;
+			letter-spacing: 4px;
+			text-transform: uppercase;
+			cursor: pointer;
+			padding: 20px 30px;
+
+			position: relative;
+
+
+		}
+
+		button::before{
+			content: "";
+			width: 50%;
+			height: 100%;
+
+			background-color: tomato;
+
+			position: absolute;
+			top: -5px;
+			left: -1%;
+
+			z-index: -1;
+
+			transform: skew(30deg);
+			transition: all 0.3s;
+		}
+
+		button::after{
+			content: "";
+			width: 50%;
+			height: 100%;
+
+			background: darkblue;
+
+			position: absolute;
+			top: 5px;
+			left: 51%;
+			/*right: -1%;*/
+
+			z-index: -1;
+			transform: skewX(30deg);
+
+			transition: all 0.3s;
+		}
+
+		button:hover::before{
+			top: 0;
+			left: 50%;
+			transform: skew(0);
+		}
+
+		button:hover::after{
+			transform: skew(0);
+			top: 0;
+			left: 0;
+		}
+	</style>
+</head>
+<body>
+
+     <button>Hover Me</button>
+
+</body>
+</html>

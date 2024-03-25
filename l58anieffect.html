@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ani Effect</title>
+	<style type="text/css">
+		body{
+			font-family: sans-serif;
+			height: 100vh;
+			background-color: #000;
+
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+		a{
+			text-decoration: none;
+			font-size: 45px;
+			color: #fff;
+
+			border: 2px solid #fff;
+			padding: 40px 50px;
+		}
+
+		a:hover{
+			color: #f00;
+			border-color: #f00;
+			animation-name: myani;
+			animation-duration: 0.3s;
+			animation-timing-function: linear;
+
+
+		}
+
+		@keyframes myani{
+			0%{
+				transform: rotate(0deg);
+			}
+
+			33%{
+				transform: rotate(20deg);
+			}
+
+			66%{
+				transform: rotate(-20deg);
+			}
+
+			100%{
+				transform: rotate(0deg);
+			}
+		}
+	</style>
+
+</head>
+<body>
+	<a href="#">Hover Me</a>
+</body>
+</html>
